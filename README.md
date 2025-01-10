@@ -13,10 +13,14 @@ Para el correcto funcionamiento del proyecto se deben tener las siguientes versi
 # Instalacion 
 
 Posterior a clonar el repositorio ejecutar el siguiente comando para instalar la app
+
 * npm install
+  
 Una vez instalado se ejecuta el siguiente comando para correr la aplicacion
+
 * ng s
 Ir al navegador y abrir la siguiente ruta
+
 * http://localhost:4200/ 
   
 
