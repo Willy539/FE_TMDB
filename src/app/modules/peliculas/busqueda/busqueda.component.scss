@@ -16,50 +16,6 @@
      align-items: center;
  }
 
- /* Estilo para el formulario */
- .search-form {
-     display: flex;
-     align-items: center;
-     gap: 10px;
-     flex-direction: column;
- }
-
- /* Estilo para el label */
- .label {
-     font-size: 24px;
-     font-weight: bold;
-     color: #333;
- }
-
- /* Estilo para el campo de búsqueda */
- .search-input {
-     padding: 10px;
-     font-size: 16px;
-     border: 1px solid #ccc;
-     border-radius: 5px;
-     width: 72%;
-     padding-right: 40px;
- }
-
- /* Estilo para el botón */
- .search-button {
-     padding: 10px 20px;
-     font-size: 16px;
-     color: gray;
-     border: none;
-     cursor: pointer;
-     background-color: transparent;
-     position: absolute;
-     right: 110px;
-     top: 80%;
-     transform: translateY(-50%);
- }
-
- .fa-search:hover {
-     color: var(--secondary-color);
- }
-
-
  .container-p {
      display: flex;
      gap: 30px;
@@ -86,7 +42,19 @@
      cursor: pointer;
  }
 
-
+ /* Estilo para el botón */
+ .search-button {
+     padding: 10px 20px;
+     font-size: 16px;
+     color: gray;
+     border: none;
+     cursor: pointer;
+     background-color: transparent;
+     position: absolute;
+     right: 110px;
+     top: 80%;
+     transform: translateY(-50%);
+ }
 
  /* Imagen circular sobre la tarjeta */
  .card-p img.circular {
@@ -170,11 +138,7 @@
      text-align: justify;
  }
 
- @media (min-width: 1368px) and (min-height: 768px) {
-     .text-container-gustar h1 {
-         padding-left: 10vw;
-     }
-
+ @media (width: 1368px) and (height: 768px) {
      .search-button {
          top: 80%;
          right: 0px;
@@ -182,6 +146,10 @@
 
      .search-input {
          width: 100%
+     }
+
+     .text-container-gustar h1 {
+         padding-left: 10vw;
      }
  }
 

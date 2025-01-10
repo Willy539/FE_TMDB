@@ -86,4 +86,8 @@ export class DetalleBusquedaComponent implements OnInit {
     this.modalPeliculaDetalle.close();
   }
 
+  consultar() {
+    this.consultarPelicula(this.paginaActual);
+  }
+
 }
