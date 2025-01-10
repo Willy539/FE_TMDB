@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output, ViewChild } from '@angular/core';
 import { PeliculasService } from 'src/app/services/peliculas.service';
 import { MatTableDataSource } from '@angular/material/table'
 import { NgbModal, NgbModalOptions, NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
@@ -80,6 +80,11 @@ export class BusquedaComponent {
     const radius = 55;
     this.circumference = 2 * Math.PI * radius;
     return this.offset = this.circumference - (percentage / 100) * this.circumference;
+  }
+
+
+  cerrarModal() {
+    this.modalPeliculaDetalle.close();
   }
 
 }
