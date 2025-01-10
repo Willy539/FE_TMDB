@@ -1,9 +1,16 @@
 <app-menu></app-menu>
 
+<div class="searchContainer">
+    <form class="search-form" style="position: relative; width: 44vw;">
+        <input type="text" class="search-input" [(ngModel)]="nombrePelicula" name="inputBus">
+        <button type="submit" class="search-button" (click)="consultar()"><i class="fas fa-search"></i></button>
+    </form>
+</div>
+
 <div class="container-d">
 
     <div *ngFor="let row of rows">
-        <div *ngFor="let item of row" style="padding: 1% 0% 1% 0%;" (click)="abrirModalDetalle(item)">
+        <div *ngFor="let item of row" style="padding: 1% 1% 1% 1%;" (click)="abrirModalDetalle(item)">
             <div class="card-d">
                 <img src="{{item.poster_path}}" alt="Imagen 1">
                 <div class="card-content-d">

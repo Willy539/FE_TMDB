@@ -30,5 +30,5 @@
 </div>
 
 <ng-template #contentModalPeliculaDetalle let-c="close" let-lg="dismiss">
-    <app-detalle [peliculaSeleccionada]="peliculaSeleccionada"></app-detalle>
+    <app-detalle [peliculaSeleccionada]="peliculaSeleccionada" (cerrarModal)="cerrarModal()"></app-detalle>
 </ng-template>
