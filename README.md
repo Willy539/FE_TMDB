@@ -14,7 +14,7 @@ Antes de comenzar, asegúrate de tener instaladas las siguientes versiones de so
 1. Clonar el repositorio:
 
 En tu terminal, navega al directorio donde deseas clonar el repositorio y ejecuta el siguiente comando:
-  git clone <URL_DEL_REPOSITORIO>
+  git clone https://github.com/Willy539/FE_TMDB.git
 
 2. Instalar las dependencias:
 
