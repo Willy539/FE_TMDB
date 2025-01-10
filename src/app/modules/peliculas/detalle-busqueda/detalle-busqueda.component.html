@@ -1,0 +1,28 @@
+<app-menu></app-menu>
+
+<div class="container-d">
+
+    <div *ngFor="let row of rows">
+        <div *ngFor="let item of row" style="padding: 1% 0% 1% 0%;" (click)="abrirModalDetalle(item)">
+            <div class="card-d">
+                <img src="{{item.poster_path}}" alt="Imagen 1">
+                <div class="card-content-d">
+                    <h3>{{item.title}}</h3>
+                    <p>{{item.release_date}}</p>
+                    <p class="description">{{item.overview}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="pagination">
+    <button id="prev" (click)="changePage(paginaActual - 1)" [disabled]="paginaActual === 1">&laquo; Anterior</button>
+    <span id="page-number">Página {{ paginaActual }} de {{ paginasTotales }}</span>
+    <button id="next" (click)="changePage(paginaActual + 1)" [disabled]="paginaActual === paginasTotales">Siguiente
+        &raquo;</button>
+</div>
+
+<ng-template #contentModalPeliculaDetalle let-c="close" let-lg="dismiss">
+    <app-detalle [peliculaSeleccionada]="peliculaSeleccionada" (cerrarModal)="cerrarModal()"></app-detalle>
+</ng-template>

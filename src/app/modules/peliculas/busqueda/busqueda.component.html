@@ -1,0 +1,34 @@
+<div class="searchContainer">
+    <form class="search-form" style="position: relative; width: 44vw;">
+        <h1 for="">Hola, aquí encuentras todo sobre tus películas favoritas</h1>
+        <input type="text" class="search-input" [(ngModel)]="txtNombrePelicula" name="inputBus">
+        <button type="submit" class="search-button" (click)="filtrarPeliculas()"><i class="fas fa-search"></i></button>
+    </form>
+</div>
+
+<div class="text-container-gustar">
+    <h1> Te podría gustar </h1>
+</div>
+
+<div class="container-p">
+    <div *ngFor="let row of rows">
+        <div *ngFor="let item of row" style="padding: 10% 0% 10% 0%;">
+            <div class="card-p" (click)="abrirModalDetalle(item)"
+                style="background-image: url('{{item.poster_path}}');">
+                <img class="circular">
+                <div class="circle-wrapper">
+                    <svg class="circle" width="75" height="75" viewBox="0 0 120 120">
+                        <circle class="circle-background" cx="60" cy="60" r="55"></circle>
+                        <circle class="circle-progress" [attr.stroke-dashoffset]="item.vote_count " cx="60" cy="60"
+                            r="55">
+                        </circle>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<ng-template #contentModalPeliculaDetalle let-c="close" let-lg="dismiss">
+    <app-detalle [peliculaSeleccionada]="peliculaSeleccionada"></app-detalle>
+</ng-template>
