@@ -1,0 +1,29 @@
+<div class="image-container-detalle">
+    <button (click)="cerrarModalDetalle()" class="boton"><i class="fa fa-times-circle"></i></button>
+    <img src={{peliculaSeleccionada.backdrop_path}} alt="Imagen de fondo">
+    <div class="text-overlay-detalle">
+        <h1><b>{{peliculaSeleccionada.title}}</b></h1>
+        <p>{{peliculaSeleccionada.release_date}}</p>
+    </div>
+</div>
+
+<div class="text-container-detalle">
+    <h3> {{peliculaSeleccionada.overview}} </h3>
+</div>
+
+<div class="text-container-elenco-detalle">
+    <h1> Elenco </h1>
+</div>
+
+<div class="cards-container-detalle">
+    <div class="carousel-detalle">
+        <div class="carousel-inner-detalle">
+            <div class="carousel-item-detalle" *ngFor="let element of elenco">
+                <div class="card-detalle">
+                    <img src={{element.profile_path}} alt="Imagen de la Card">
+                    <p>{{element.name}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

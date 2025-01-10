@@ -1,0 +1,146 @@
+/* Estilo para el contenedor de imagen */
+.image-container-detalle {
+    position: relative;
+    width: 100%;
+    height: 55vh;
+    overflow: hidden;
+}
+
+.image-container-detalle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.image-container-detalle .boton {
+    position: absolute;
+    top: 7%;
+    left: 95%;
+    transform: translate(-50%, -50%);
+    padding: 10px 20px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    color: #000;
+}
+
+.image-container-detalle .boton:hover {
+    background-color: var(--secondary-color)
+}
+
+.text-overlay-detalle {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 22px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+    color: white;
+    text-align: left;
+}
+
+.text-overlay-detalle h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.text-overlay-detalle p {
+    margin: 5px 0 0;
+    font-size: 16px;
+}
+
+/* Estilo para el contenedor de texto */
+.text-container-detalle {
+    padding: 20px;
+    background-color: #f9f9f9;
+    text-align: justify;
+}
+
+/* Estilo para el contenedor de texto */
+.text-container-elenco-detalle h1 {
+    padding-left: 20px;
+    padding-top: 20px;
+    text-align: justify;
+    margin: 0 !important;
+}
+
+/* Estilo para el contenedor de cards */
+.cards-container-detalle {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.card-detalle {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    justify-content: center;
+    align-items: center;
+    height: 43vh;
+}
+
+
+.card-detalle img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.card-detalle h3 {
+    margin: 10px 0 0;
+    font-size: 18px;
+    color: #333;
+}
+
+.card-detalle p {
+    margin: 10px 0 0;
+    font-size: 18px;
+    color: #333;
+}
+
+.carousel-detalle {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel-inner-detalle {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item-detalle {
+    min-width: 20%;
+    box-sizing: border-box;
+    position: relative;
+    padding: 1%;
+    text-align: left;
+}
+
+@media (min-width: 1368px) and (min-height: 768px) {
+    .card-detalle {
+        height: 30vh !important;
+    }
+}
+
+@media (min-width: 1920px) and (min-height: 1080px) {
+    .card-detalle {
+        height: 22vh !important;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .card-detalle {
+        height: 17vh !important;
+    }
+
+    .carousel-item-detalle {
+        min-width: 25%;
+    }
+}

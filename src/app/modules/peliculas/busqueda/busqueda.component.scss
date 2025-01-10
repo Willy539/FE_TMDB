@@ -1,0 +1,214 @@
+ /* Estilo para el contenedor */
+ .searchContainer {
+     width: 100%;
+     height: 35vh;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     background-color: #D9D9D9;
+ }
+
+ .filmContainer {
+     width: 100%;
+     height: auto;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+ }
+
+ /* Estilo para el formulario */
+ .search-form {
+     display: flex;
+     align-items: center;
+     gap: 10px;
+     flex-direction: column;
+ }
+
+ /* Estilo para el label */
+ .label {
+     font-size: 24px;
+     font-weight: bold;
+     color: #333;
+ }
+
+ /* Estilo para el campo de búsqueda */
+ .search-input {
+     padding: 10px;
+     font-size: 16px;
+     border: 1px solid #ccc;
+     border-radius: 5px;
+     width: 72%;
+     padding-right: 40px;
+ }
+
+ /* Estilo para el botón */
+ .search-button {
+     padding: 10px 20px;
+     font-size: 16px;
+     color: gray;
+     border: none;
+     cursor: pointer;
+     background-color: transparent;
+     position: absolute;
+     right: 110px;
+     top: 80%;
+     transform: translateY(-50%);
+ }
+
+ .fa-search:hover {
+     color: var(--secondary-color);
+ }
+
+
+ .container-p {
+     display: flex;
+     gap: 30px;
+     justify-content: center;
+     flex-wrap: wrap;
+ }
+
+ /* Estilo para cada tarjeta */
+ .card-p {
+     position: relative;
+     width: 250px;
+     height: 350px;
+     background-size: cover;
+     background-position: center;
+     border-radius: 10px;
+     color: var(--text-color-black);
+     text-align: center;
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+     overflow: hidden;
+     display: flex;
+     flex-direction: column;
+     justify-content: flex-end;
+     padding: 20px;
+     cursor: pointer;
+ }
+
+
+
+ /* Imagen circular sobre la tarjeta */
+ .card-p img.circular {
+     position: absolute;
+     left: 20px;
+     bottom: 20px;
+     width: 80px;
+     height: 80px;
+     border-radius: 50%;
+     border: 3px solid white;
+     object-fit: cover;
+     background-color: white;
+ }
+
+ /* Títulos y subtítulos en la parte inferior izquierda */
+ .card-p h3,
+ .card-p p {
+     margin: 0;
+     text-align: right;
+ }
+
+ .card-p h3 {
+     font-size: 20px;
+     margin-bottom: 5px;
+ }
+
+ .card-p p {
+     font-size: 14px;
+ }
+
+
+ .circle-wrapper {
+     position: absolute;
+     left: 20px;
+     bottom: 20px;
+     width: 80px;
+     height: 80px;
+     border-radius: 50%;
+     border: 3px solid white;
+     object-fit: cover;
+ }
+
+
+ .circle {
+     transform: rotate(-90deg);
+     /* Rota el círculo para que comience desde arriba */
+ }
+
+ .circle-background,
+ .circle-progress {
+     fill: none;
+     stroke-width: 10;
+     stroke-linecap: round;
+ }
+
+ .circle-background {
+     stroke: #eee;
+ }
+
+ .circle-progress {
+     stroke: var(--secondary-color);
+     /* Color verde para el progreso */
+     stroke-dasharray: 440;
+     /* Circunferencia del círculo */
+     transition: stroke-dashoffset 1s ease;
+ }
+
+ .percentage-text {
+     bottom: 0px;
+     width: 77px;
+     height: 47px;
+     position: absolute;
+     font-size: 30px;
+     color: #333;
+     font-weight: bold;
+ }
+
+ .text-container-gustar h1 {
+     padding-left: 21vw;
+     padding-top: 20px;
+     text-align: justify;
+ }
+
+ @media (min-width: 1368px) and (min-height: 768px) {
+     .text-container-gustar h1 {
+         padding-left: 10vw;
+     }
+
+     .search-button {
+         top: 80%;
+         right: 0px;
+     }
+
+     .search-input {
+         width: 100%
+     }
+ }
+
+ @media (min-width: 1920px) and (min-height: 1080px) {
+     .text-container-gustar h1 {
+         padding-left: 21vw;
+     }
+
+     .search-button {
+         top: 80%;
+         right: 110px;
+     }
+
+     .search-input {
+         width: 73%
+     }
+
+ }
+
+ @media screen and (max-width: 768px) {
+     .search-button {
+         top: 90%;
+         right: -45px;
+     }
+
+     .search-input {
+         width: 150%
+     }
+
+ }
